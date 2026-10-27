@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings | AquaTrack</title><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/logo.css"><link rel="stylesheet" href="/css/reminder.css"><script src="/js/water-reminder.js" defer></script><script src="/js/settings.js" defer></script></head>
+<body>
+<header class="site-header"><a class="brand" href="/">AquaTrack</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/dashboard.html">Dashboard</a><a class="active" href="/settings.html">Settings</a></nav></header>
+<main class="page-main settings-main">
+  <div class="page-title"><div><p class="eyebrow">MAKE IT YOURS</p><h1>Settings</h1><p class="muted">Choose a daily goal that works for your tracking.</p></div></div>
+  <div id="settingsNotice" class="notice" role="status" hidden></div>
+  <section class="panel settings-panel"><div class="settings-illustration"><img src="/images/water-logo.png" alt=""></div><p class="eyebrow">DAILY TARGET</p><h2>Set your water goal</h2><p class="muted">Your goal is saved locally in your AquaTrack database.</p>
+    <form id="settingsForm"><label for="goalInput">Daily goal (ml)</label><div class="goal-input-wrap"><input type="number" id="goalInput" min="250" max="10000" step="50" value="2000" required><span>ml / day</span></div><p class="small muted">Enter a value between 250 and 10,000 ml.</p><button class="button primary" type="submit">Save Goal</button></form>
+  </section>
+  <p class="small muted settings-footnote">This is a tracking preference, not a personalized medical recommendation.</p>
+</main><footer>Time to drink some water!</footer>
+</body></html>

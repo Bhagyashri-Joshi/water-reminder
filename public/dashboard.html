@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | AquaTrack</title><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/logo.css"><link rel="stylesheet" href="/css/reminder.css"><script src="/js/water-reminder.js" defer></script><script src="/js/dashboard.js" defer></script></head>
+<body>
+<header class="site-header"><a class="brand" href="/">AquaTrack</a><nav aria-label="Main navigation"><a href="/">Home</a><a class="active" href="/dashboard.html">Dashboard</a><a href="/settings.html">Settings</a></nav></header>
+<main class="page-main">
+  <div class="page-title"><div><p class="eyebrow">YOUR DAILY CHECK-IN</p><h1>Water dashboard</h1><p class="muted">Every glass counts. Keep your progress moving.</p></div><div class="date-chip" id="todayLabel">Today</div></div>
+  <div id="notice" class="notice" role="status" hidden></div>
+  <section class="dashboard-grid">
+    <article class="panel progress-panel">
+      <div class="panel-top"><div><p class="eyebrow">DAILY INTAKE</p><h2 id="totalAmount">0 <span>ml</span></h2></div><div class="water-mark"><img src="/images/water-logo.png" alt=""></div></div>
+      <div class="goal-line"><span>Daily goal</span><strong id="goalAmount">2,000 ml</strong></div>
+      <div class="progress-track" role="progressbar" aria-label="Daily water goal progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div id="progressFill" class="progress-fill"></div></div>
+      <div class="progress-meta"><strong id="progressPercent">0%</strong><span id="remainingText">2,000 ml to go</span></div>
+      <p id="goalMessage" class="goal-message">You're off to a fresh start.</p>
+    </article>
+    <article class="panel add-panel">
+      <p class="eyebrow">LOG A DRINK</p><h2>Add water</h2><p class="muted small">Enter the amount you drank.</p>
+      <form id="addForm">
+        <label for="amountInput">Amount (ml)</label>
+
+<div class="amount-control">
+  <button
+    type="button"
+    id="minusBtn"
+    class="step-btn"
+    aria-label="Decrease amount"
+  >−</button>
+
+  <input
+    id="amountInput"
+    type="number"
+    min="0"
+    max="10000"
+    step="50"
+    value="250"
+    required
+  >
+
+  <button
+    type="button"
+    id="plusBtn"
+    class="step-btn"
+    aria-label="Increase amount"
+  >+</button>
+</div>
+        <div class="quick-add"><button type="button" data-amount="150">+150 ml</button><button type="button" data-amount="250">+250 ml</button><button type="button" data-amount="500">+500 ml</button></div>
+        <button class="button primary full-width" type="submit">Add Water</button>
+      </form>
+    </article>
+  </section>
+  <section class="panel entries-panel">
+    <div class="panel-heading"><div><p class="eyebrow">YOUR LOG</p><h2>Water entries</h2></div><div class="history-picker"><label for="historyDate">View date</label><input type="date" id="historyDate"></div></div>
+    <div id="historySummary" class="history-summary" hidden></div>
+    <div id="entriesList" class="entries-list"><p class="empty-state">Loading your entries…</p></div>
+  </section>
+</main>
+<footer>Be Hydrated!</footer>
+</body></html>
